@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pixel-city/Controller/MapVC.swift"
-            timestampString = "533604234.779274"
+            timestampString = "533611832.912895"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "MapVC"
             landmarkType = "3">
             <Locations>
