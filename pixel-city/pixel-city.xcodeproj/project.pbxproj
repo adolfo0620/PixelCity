@@ -16,6 +16,7 @@
 		3EFCDCE81FCE42EE00FEB295 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFCDCE71FCE42EE00FEB295 /* PhotoCell.swift */; };
 		3EFCDCEB1FCE4B4100FEB295 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFCDCEA1FCE4B4100FEB295 /* Constants.swift */; };
 		3EFCDCED1FCE4BD100FEB295 /* key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFCDCEC1FCE4BD100FEB295 /* key.swift */; };
+		3EFCDCF11FD22EB000FEB295 /* PopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFCDCF01FD22EB000FEB295 /* PopVC.swift */; };
 		ED1B8912BC04C14E81F231E1 /* Pods_pixel_city.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9EA41BDBCA5C62E435F4C /* Pods_pixel_city.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		3EFCDCE71FCE42EE00FEB295 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		3EFCDCEA1FCE4B4100FEB295 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3EFCDCEC1FCE4BD100FEB295 /* key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = key.swift; sourceTree = "<group>"; };
+		3EFCDCF01FD22EB000FEB295 /* PopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopVC.swift; sourceTree = "<group>"; };
 		93C9EA41BDBCA5C62E435F4C /* Pods_pixel_city.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pixel_city.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				3EFCDCC51FCDE5A100FEB295 /* MapVC.swift */,
+				3EFCDCF01FD22EB000FEB295 /* PopVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			files = (
 				3EFCDCEB1FCE4B4100FEB295 /* Constants.swift in Sources */,
 				3EFCDCED1FCE4BD100FEB295 /* key.swift in Sources */,
+				3EFCDCF11FD22EB000FEB295 /* PopVC.swift in Sources */,
 				3EFCDCE81FCE42EE00FEB295 /* PhotoCell.swift in Sources */,
 				3EFCDCC61FCDE5A100FEB295 /* MapVC.swift in Sources */,
 				3EFCDCE61FCE012000FEB295 /* DroppablePin.swift in Sources */,
