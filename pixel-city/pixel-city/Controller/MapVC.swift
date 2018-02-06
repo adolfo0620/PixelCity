@@ -24,6 +24,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
     var collectionView: UICollectionView?
     var imageUrlArray = [String]()
     var imageArray = [UIImage]()
+    var imagePhotoDetailArray = [String]()
     
     @IBOutlet weak var pullUpView: UIView!
     @IBOutlet weak var pullUpViewConstraint: NSLayoutConstraint!
@@ -180,6 +181,7 @@ extension MapVC: MKMapViewDelegate{
             for photo in photosDictArray{
                 let postUrl = "https://farm\(photo["farm"]!).staticflickr.com/\(photo["server"]!)/\(photo["id"]!)_\(photo["secret"]!)_h_d.jpg"
                 self.imageUrlArray.append(postUrl)
+                self.imagePhotoDetailArray.append(photo["title"] as! String)
             }
             handler(true)
         }
@@ -188,7 +190,7 @@ extension MapVC: MKMapViewDelegate{
     func retrieveImages(handler: @escaping (_ status: Bool)->() ){
         for url in imageUrlArray{
             Alamofire.request(url).responseImage(completionHandler: { (response) in
-                guard let image = response.result.value else {return }
+                guard let image = response.result.value else { return }
                 self.imageArray.append(image)
                 self.progressLbl?.text = "\(self.imageArray.count)_/40 Images Downloaded"
                 
@@ -243,7 +245,7 @@ extension MapVC: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let popVC = storyboard?.instantiateViewController(withIdentifier: "PopVC") as? PopVC else { return }
-        popVC.initData(forImage: imageArray[indexPath.row])
+        popVC.initData(forImage: imageArray[indexPath.row], withDetail: imagePhotoDetailArray[indexPath.row])
         present(popVC, animated: true, completion: nil)
     }
     
@@ -256,7 +258,7 @@ extension MapVC: UIViewControllerPreviewingDelegate{
         
         guard  let popVC = storyboard?.instantiateViewController(withIdentifier: "PopVC") as? PopVC else { return nil }
         
-        popVC.initData(forImage: imageArray[indexPath.row])
+        popVC.initData(forImage: imageArray[indexPath.row], withDetail:  imagePhotoDetailArray[indexPath.row])
         
         previewingContext.sourceRect = cell.contentView.frame
         
